@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coffeeAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="84O-Qr-pJY">
+                                <rect key="frame" x="0.5" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoffeeApp" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-w8-cMe">
+                                <rect key="frame" x="31" y="28" width="312" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="drS-6Z-p7j"/>
+                                    <constraint firstAttribute="height" constant="114" id="sEY-0n-wHU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the number of cups of coffee" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryC-Gp-UgA">
+                                <rect key="frame" x="53" y="139" width="268" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.96366117517446237" blue="0.9936068536912962" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cups..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pm-4H-lgU">
+                                <rect key="frame" x="53" y="165" width="269" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="final amount to pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nam-pt-npm">
+                                <rect key="frame" x="114.5" y="217" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.99236094484084758" blue="0.98713456059927029" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$33.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-Hq-bJM">
+                                <rect key="frame" x="140" y="246" width="94" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2y1-62-DXg"/>
+                                    <constraint firstAttribute="width" constant="94" id="tw1-K4-xg9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" red="0.97751947602815736" green="1" blue="0.91745442437215829" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="118-6Y-Uei">
+                                <rect key="frame" x="97" y="280" width="182" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="pxd-se-rkv"/>
+                                    <constraint firstAttribute="width" constant="182" id="rAr-d4-CE3"/>
+                                </constraints>
+                                <state key="normal" image="calculate"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBK-ak-I7M"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nam-pt-npm" firstAttribute="centerX" secondItem="84O-Qr-pJY" secondAttribute="centerX" id="928-UR-dOY"/>
+                            <constraint firstItem="nam-pt-npm" firstAttribute="top" secondItem="8pm-4H-lgU" secondAttribute="bottom" constant="22" id="A8d-Zi-QMf"/>
+                            <constraint firstItem="118-6Y-Uei" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GON-xv-cgs"/>
+                            <constraint firstItem="84O-Qr-pJY" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="JmD-Ev-LhW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ryC-Gp-UgA" secondAttribute="trailing" constant="38" id="OCi-vp-j6W"/>
+                            <constraint firstItem="ryC-Gp-UgA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="T5M-vb-mr4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gZz-w8-cMe" secondAttribute="trailing" constant="16" id="XSb-NR-S4V"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nam-pt-npm" secondAttribute="bottom" constant="429" id="ZRt-00-FNZ"/>
+                            <constraint firstItem="118-6Y-Uei" firstAttribute="top" secondItem="nam-pt-npm" secondAttribute="bottom" constant="42" id="aXr-PB-UVe"/>
+                            <constraint firstItem="ryC-Gp-UgA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="dCV-rl-gw8"/>
+                            <constraint firstItem="gZz-w8-cMe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ftq-34-eT2"/>
+                            <constraint firstItem="bKn-Hq-bJM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gWn-EJ-seo"/>
+                            <constraint firstItem="8pm-4H-lgU" firstAttribute="leading" secondItem="ryC-Gp-UgA" secondAttribute="leading" id="k0M-Wg-kVv"/>
+                            <constraint firstItem="bKn-Hq-bJM" firstAttribute="top" secondItem="nam-pt-npm" secondAttribute="bottom" constant="8" id="knT-59-9l4"/>
+                            <constraint firstItem="nam-pt-npm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roM-vj-mDy"/>
+                            <constraint firstItem="nam-pt-npm" firstAttribute="centerX" secondItem="8pm-4H-lgU" secondAttribute="centerX" id="tyh-iU-exo"/>
+                            <constraint firstItem="gZz-w8-cMe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="zsB-HQ-Yhg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="ryC-Gp-UgA" id="ma6-Rf-fyf"/>
+                        <outlet property="inputText" destination="8pm-4H-lgU" id="69e-uS-hLt"/>
+                        <outlet property="payPrice" destination="bKn-Hq-bJM" id="qIQ-51-qM6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CoffeeApp" width="313" height="56"/>
+        <image name="bg" width="375" height="667"/>
+        <image name="calculate" width="182" height="53"/>
+    </resources>
 </document>
