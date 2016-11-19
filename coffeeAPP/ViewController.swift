@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             errorLabel.text = "enter value in box"
         } else {
             let input = Double(inputText.text!)
-            
+              
             payPrice.text = "$ \(input! * 5.0)"
         }
         
